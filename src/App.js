@@ -13,7 +13,7 @@ function App() {
   const [currentGuessNumber, setCurrentGuessNumber] = useState(1);
   const [userRecord, setUserRecord] = useState([]);
   const [gameStatus, setGameStatus] = useState(null);
-  const [animeDB, setAnimeDB] = useState(process.env.animeDB);
+  const [animeDB, setAnimeDB] = useState([]);
   const [answer, setAnswer] = useState('')
   const [answerVideo, setAnswerVideo] = useState('')
   const [filteredList, setFilteredList] = useState([])
@@ -27,11 +27,11 @@ function App() {
 
   useEffect(() => {
     const timerID = setInterval(() => tick(), 1000);
-    console.log('tick')
+    console.log('tick');
     return () => {
       clearInterval(timerID);
     };
-  });
+  }, []);
 
   const tick = () => {
     const currentDate = new Date();
@@ -43,11 +43,6 @@ function App() {
     setFormattedDate(formattedDateTemp);
 
     const storedDate = JSON.parse(localStorage.getItem('todayDate'));
-
-
-    setAnswer(process.env.answersDB[formattedDate]['name'])
-    setAnswerVideo(process.env.answersDB[formattedDate]['link']) 
-    setAnimeDB(process.env.animeDB[formattedDate]['link'])
 
     if (!storedDate) {
       localStorage.setItem('todayDate', JSON.stringify(formattedDateTemp));
@@ -103,6 +98,28 @@ function App() {
       setGameStatus(gS);
     }
   }, []);
+
+  useEffect(() => {
+    if (formattedDate) {
+      // Ensure process.env.answersDB and process.env.animeDB are defined and have the date key
+      const answersDBEntry = process.env.answersDB?.[formattedDate];
+      const animeDB = process.env.animeDB
+
+      if (answersDBEntry) {
+        setAnswer(answersDBEntry.name);
+        setAnswerVideo(answersDBEntry.link);
+      } else {
+        console.error(`No entry found for date ${formattedDate} in answersDB`);
+      }
+
+      if (animeDB) {
+        setAnimeDB(animeDB);
+      } else {
+        console.error(`No entry found for date ${formattedDate} in animeDB`);
+      }
+    }
+  }, [formattedDate])
+
 
   //handle the user changing their current guess
   const handleChange = (event) => {

@@ -1,38 +1,207 @@
-.App {
+@font-face {
+  font-family: 'JapaneseBrushArt';
+  src: url('../public/Fonts/midorima.regular.ttf') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'JapaneseFont';
+  src: url('../public/Fonts/japanese_font.otf') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+.app {
+  font-family: 'JapaneseFont', sans-serif;
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  background: rgb(237,68,54);
+  background-color: transparent;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  /* height: 100vh; */
+  width: 340px;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  background-color: transparent;
 }
 
-.App-link {
-  color: #61dafb;
+.header{
+  width: 340px;
+  height: 100px;
+  margin-top: 20px;
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.input-container{
+  background-color: transparent;
+  width: 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+
+}
+
+.guess-input{
+  background-color: #B1B7D1;
+  width: 320px;
+  height: 60px;
+  margin-top: 20px;
+  border-radius: 5px;
+  padding-left: 10px;
+  font-size: 14pt;
+  margin-bottom: 0px;
+  z-index: 2;
+  border: 2px solid black;
+}
+
+.guess-input:focus-visible{
+  outline: none;
+}
+
+.guess-info-container{
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  width: 340px;
+  height: 240px;
+}
+
+
+.logo{
+  width: 80px;
+  height: 80px;
+  background-color: white;
+  border-radius: 50%;
+  background-image: src('../public/logo.png');
+}
+
+.autofill-guess-container{
+  position: relative;
+  margin-top: -30px;
+  background-color: transparent;
+  width: 332px;
+  z-index: 1;
+  margin-bottom: 30px;
+}
+
+.youtube-video-audio{
+  width: 0px !important;
+  height: 0px!important;
+}
+
+.autofill-guess{
+  position: relative;
+  background-color: #9b9fb5;
+  color: white;
+  z-index: 1;
+  width: 100%;
+  outline: none;
+  font-size: 16pt;
+  border-bottom: 2px solid black; 
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  height: 40px;
+  text-align: start;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.autofill-guess:first-of-type {
+  margin-top: 30px; /* Adjust the value as needed */
+}
+
+
+
+.video-buttons-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 330px;
+  margin-top: 20px;
+}
+
+.video-button{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+p{
+  color: #B1B7D1;
+}
+
+.end-message {
+  background-color: #B1B7D1;
+  width: 340px;
+  height: 60px;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  border-radius: 5px;
+  font-size: 16pt;
+  margin-bottom: 0px;
+  z-index: 2;
+  color: black;
+  text-align: center; /* Align text in the center */
+  display: flex; /* Enable flexbox */
+  align-items: center; /* Center items vertically */
+  justify-content: center;
+  cursor: default;
+}
+
+.headerButton{
+  color: white;
+  width: 26px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0 1px 0 0;
+}
+
+.showAnswerButton{
+  font-family: 'JapaneseFont', sans-serif;
+  color: white;
+  background-color: transparent;
+  box-shadow: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16pt;
+  margin-top: 20px;
+
+}
+
+.rightHeaderButtonContainer{
+  width: 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.leftHeaderButtonContainer{
+  width: 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
 }
