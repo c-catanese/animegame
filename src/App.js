@@ -114,9 +114,7 @@ function App() {
 
       if (animeDB) {
         setAnimeDB(animeDB);
-      } else {
-        console.error(`No entry found for date ${formattedDate} in animeDB`);
-      }
+      } 
     }
   }, [formattedDate])
 
