@@ -1,6 +1,5 @@
 import "./App.css";
 import React, {useState, useEffect, useRef} from 'react';
-import axios from "axios";
 import YouTube from 'react-youtube';
 import GuessDisplay from "./GuessDisplay/GuessDisplay";
 import Graph from "./Graph/Graph";
@@ -14,7 +13,7 @@ function App() {
   const [currentGuessNumber, setCurrentGuessNumber] = useState(1);
   const [userRecord, setUserRecord] = useState([]);
   const [gameStatus, setGameStatus] = useState(null);
-  const [animeDB, setAnimeDB] = useState([]);
+  const [animeDB, setAnimeDB] = useState(process.env.animeDB);
   const [answer, setAnswer] = useState('')
   const [answerVideo, setAnswerVideo] = useState('')
   const [filteredList, setFilteredList] = useState([])
@@ -44,6 +43,12 @@ function App() {
     setFormattedDate(formattedDateTemp);
 
     const storedDate = JSON.parse(localStorage.getItem('todayDate'));
+
+
+    setAnswer(process.env.answersDB[formattedDate]['name'])
+    setAnswerVideo(process.env.answersDB[formattedDate]['link']) 
+
+
     if (!storedDate) {
       localStorage.setItem('todayDate', JSON.stringify(formattedDateTemp));
     } else if (storedDate !== formattedDateTemp) {
@@ -61,7 +66,6 @@ function App() {
     }
     return '';
   }
-  // const totalDaysPlayed = Object.keys(userRecord).length - 1; // Subtract 1 for the 'x' key
 
   useEffect(() => {
     // Retrieve user record from localStorage
@@ -99,31 +103,6 @@ function App() {
       setGameStatus(gS);
     }
   }, []);
-
-
-  //this will get the answer for the day
-  useEffect(() => {
-    axios.get(`http://localhost:5000/answers/?date=${formattedDate}`)
-      .then(response => {
-        console.log(response)
-        if(response.data.length){
-          setAnswer(response.data[0]['name'])
-          setAnswerVideo(response.data[0]['link']) 
-        }
-        })
-      .catch(error => console.error(error));
-  }, [formattedDate]);
-
-  //this will get the db of animes
-  useEffect(() => {
-    axios.get(`http://localhost:5000/anime`)
-      .then(response => {
-        console.log(response)
-        setAnimeDB(response.data); 
-        })
-      .catch(error => console.error(error));
-  }, []);
-
 
   //handle the user changing their current guess
   const handleChange = (event) => {
