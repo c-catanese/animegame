@@ -47,7 +47,7 @@ function App() {
 
     setAnswer(process.env.answersDB[formattedDate]['name'])
     setAnswerVideo(process.env.answersDB[formattedDate]['link']) 
-
+    setAnimeDB(process.env.animeDB[formattedDate]['link'])
 
     if (!storedDate) {
       localStorage.setItem('todayDate', JSON.stringify(formattedDateTemp));
