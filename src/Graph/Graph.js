@@ -9,7 +9,8 @@ function Graph({ userRecord, showScoreboard}){
 
   useEffect(() => {
     // Remove any existing SVG when the effect runs
-    d3.select(chartRef.current).selectAll("svg").remove();
+    const currentChartRef = chartRef.current;
+    d3.select(currentChartRef).selectAll("svg").remove();
   
     // Set up the dimensions of the chart
     const margin = { top: 20, right: 20, bottom: 20, left: 20 };
@@ -17,7 +18,7 @@ function Graph({ userRecord, showScoreboard}){
     const height = 300 - margin.top - margin.bottom;
   
     // Create the SVG container for the chart
-    const svg = d3.select(chartRef.current).append("svg")
+    const svg = d3.select(currentChartRef).append("svg")
       .attr("width", width + margin.left + margin.right)
       .attr("height", height + margin.top + margin.bottom)
       .append("g")
@@ -84,7 +85,7 @@ function Graph({ userRecord, showScoreboard}){
       .style("font-family", "sans-serif")
       .style("font-size", "10px")
       .style("font-weight", "bold")
-      .style('fill', 'black')      .text(d => d.toUpperCase());
+      .style('fill', 'black').text(d => d.toUpperCase());
   
     // Add the x axis to the bottom of the chart but hide its labels and ticks
     svg.append("g")
@@ -119,7 +120,7 @@ function Graph({ userRecord, showScoreboard}){
   
     // Cleanup function to remove the chart when the component unmounts
     return () => {
-      d3.select(chartRef.current).selectAll("*").remove();
+      d3.select(currentChartRef).selectAll("*").remove();
     };
   }, [userRecord]);
   

@@ -80,7 +80,7 @@ function App() {
 
     // If no user record exists, initialize with zeros
     if (!userRecord) {
-      userRecord = {1: 1, 2: 3, 3: 4, 'x': 0 };
+      userRecord = {1: 0, 2: 0, 3: 0, 'x': 0 };
       localStorage.setItem('userRecord', JSON.stringify(userRecord));
       setUserRecord(userRecord)
     };
@@ -176,7 +176,7 @@ function App() {
         setWinner(false)
         setGameStatus(false)
         setGraphButtonAvail(true)
-        const updatedRecord = {...userRecord, ['x']: userRecord['x'] + 1};
+        const updatedRecord = {...userRecord, x: userRecord['x'] + 1};
         setUserRecord(updatedRecord)
         localStorage.setItem('userRecord', JSON.stringify(updatedRecord))
         localStorage.setItem('gameStatus', JSON.stringify(false));
