@@ -207,7 +207,6 @@ function App() {
     } else {
       player.playVideo();
       setIsPlaying(true)
-
     }
   };
 
@@ -306,10 +305,12 @@ function App() {
         <div className="video-buttons-container">
           <button className="video-button" onClick={() => handleRewindFastForward(-10)}><svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em" viewBox="0 0 24 24"><path fill="white" d="M6 13c0-1.65.67-3.15 1.76-4.24L6.34 7.34A8.014 8.014 0 0 0 4 13c0 4.08 3.05 7.44 7 7.93v-2.02c-2.83-.48-5-2.94-5-5.91m14 0c0-4.42-3.58-8-8-8c-.06 0-.12.01-.18.01l1.09-1.09L11.5 2.5L8 6l3.5 3.5l1.41-1.41l-1.08-1.08c.06 0 .12-.01.17-.01c3.31 0 6 2.69 6 6c0 2.97-2.17 5.43-5 5.91v2.02c3.95-.49 7-3.85 7-7.93"/></svg>
           </button>
+          {isPlaying && <p className="playingText">Playing...</p>}
+          {!isPlaying && <p className="playingText">Paused</p>}
            <button className="video-button" onClick={() => handleTogglePlay()}> {isPlaying ?<svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 14 14"><path fill="none" stroke="white" strokeLinecap="round" strokeLinejoin="round" d="M4 .5H1.5a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1H4a1 1 0 0 0 1-1v-11a1 1 0 0 0-1-1m8.5 0H10a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h2.5a1 1 0 0 0 1-1v-11a1 1 0 0 0-1-1"/> </svg>: <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 14 14"><path fill="none" stroke="white" strokeLinecap="round" strokeLinejoin="round" d="M1.436 12.33a1.14 1.14 0 0 0 .63 1a1.24 1.24 0 0 0 1.22 0l8.65-5.35a1.11 1.11 0 0 0 0-2L3.286.67a1.24 1.24 0 0 0-1.22 0a1.14 1.14 0 0 0-.63 1z"/> </svg>}
           </button>
         </div>
-
+        
         {gameStatus!==null && <button onClick={showAnswer} className="showAnswerButton">Show Answer</button>}
 
         {showScores && 
@@ -326,7 +327,7 @@ function App() {
           <Help toggleHelp={showHelp}/>
         }
       </div>
-      <YouTube style={{zIndex:'-100', position: 'absolute', top: '0', left: '0'}} videoId={answerVideo} opts={{ playerVars: { autoplay: 0, controls: 0, loop: 1, playlist: answerVideo }, height: '0', width: '0'}} ref={playerRef}/>
+      <YouTube style={{zIndex:'-100', position: 'absolute', top: '0', left: '0'}} videoId={answerVideo} opts={{ playerVars: { autoplay: 1, controls: 0, loop: 1, playlist: answerVideo }, height: '0', width: '0'}} ref={playerRef}/>
     </div>
   );
 }
