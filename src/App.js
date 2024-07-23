@@ -197,7 +197,7 @@ function App() {
 
   const playerRef = useRef(null);
 
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(true);
 
   const handleTogglePlay = () => {
     const player = playerRef.current.internalPlayer;
