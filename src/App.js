@@ -197,7 +197,7 @@ function App() {
 
   const playerRef = useRef(null);
 
-  const [isPlaying, setIsPlaying] = useState(true);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   const handleTogglePlay = () => {
     const player = playerRef.current.internalPlayer;
@@ -327,7 +327,7 @@ function App() {
           <Help toggleHelp={showHelp}/>
         }
       </div>
-      <YouTube style={{zIndex:'-100', position: 'absolute', top: '0', left: '0'}} videoId={answerVideo} opts={{ playerVars: { autoplay: 1, controls: 0, loop: 1, playlist: answerVideo }, height: '0', width: '0'}} ref={playerRef}/>
+      <YouTube style={{zIndex:'-100', position: 'absolute', top: '0', left: '0'}} videoId={answerVideo} opts={{ playerVars: { autoplay: 0, controls: 0, loop: 1, playlist: answerVideo }, height: '0', width: '0'}} ref={playerRef}/>
     </div>
   );
 }
