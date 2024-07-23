@@ -244,11 +244,11 @@ function App() {
       }
     }).join('');
 
-    const text = `Weeble ${gameNumber} ${guessList.length}/3\n${squares}\n#weeble #anime #wordle\nhttps://theweeble.com`
+    const text = `Weeble #${gameNumber} ${guessList.length}/3\n${squares}\n#weeble #anime #wordle\nhttps://theweeble.com`
     try {
       await navigator.clipboard.writeText(text);
       setSharePopup(true)
-      setTimeout(() => setSharePopup(null), 2000);
+      // setTimeout(() => setSharePopup(null), 2000);
     } catch (err) {
       setSharePopup(false)
       setTimeout(() => setSharePopup(null), 2000);
