@@ -13,5 +13,23 @@
 
 
 .container{
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 170px;
+  height: fit-content;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 8;
+  border-radius: 10px;
+  background-color: #9b9fb5;
   font-family: 'JapaneseFont', sans-serif;
+  font-size: 12pt;
+}
+
+p{
+  margin: 0 0 0 0;
 }

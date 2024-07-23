@@ -24,6 +24,8 @@ function App() {
   const [showScores, setShowScores] = useState(false);
   const [help, setHelp] = useState(false)
   const [graphButtonAvail, setGraphButtonAvail] = useState(null)
+  const [gameNumber, setGameNumber] = useState(0);
+
 
 
   useEffect(() => {
@@ -109,6 +111,7 @@ function App() {
       if (answersDBEntry) {
         setAnswer(answersDBEntry.name);
         setAnswerVideo(answersDBEntry.link);
+        setGameNumber(answersDBEntry.number)
       } else {
         console.error(`No entry found for date ${formattedDate} in answersDB`);
       }
@@ -242,7 +245,7 @@ function App() {
       }
     }).join('');
 
-    const text = `Weeble #X ${guessList.length}/3\n${squares}\n#weeble #anime #wordle\nhttps://weeble.io`
+    const text = `Weeble ${gameNumber} ${guessList.length}/3\n${squares}\n#weeble #anime #wordle\nhttps://theweeble.com`
     try {
       await navigator.clipboard.writeText(text);
       setSharePopup(true)
