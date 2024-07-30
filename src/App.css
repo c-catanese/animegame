@@ -38,10 +38,27 @@
   background-color: transparent;
 }
 
+
+h1{
+  color:white;
+  margin: 20px 0px;
+}
+
+
 .header{
   width: 340px;
-  height: 100px;
-  margin-top: 20px;
+  height: 150px;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+nav{
+  width: 340px;
+  height: 150px;
   background-color: transparent;
   display: flex;
   flex-direction: row;
@@ -210,3 +227,4 @@ p{
   color: white;
   text-align: center;
 }
+
