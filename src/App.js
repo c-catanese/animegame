@@ -30,13 +30,13 @@ function App() {
 
   useEffect(() => {
     const timerID = setInterval(() => tick(), 1000);
-    console.log('tick');
     return () => {
       clearInterval(timerID);
     };
   }, []);
 
   const tick = () => {
+    console.log('tick')
     const currentDate = new Date();
     const formattedDateTemp = currentDate.toLocaleDateString('en-US', {
       month: '2-digit',
@@ -50,10 +50,14 @@ function App() {
     if (!storedDate) {
       localStorage.setItem('todayDate', JSON.stringify(formattedDateTemp));
     } else if (storedDate !== formattedDateTemp) {
-      console.log('test')
       localStorage.setItem('todayDate', JSON.stringify(formattedDateTemp));
       localStorage.setItem('gameStatus', JSON.stringify(null));
       localStorage.setItem('todaysGuesses', JSON.stringify(null));
+      setGuessList([]);
+      setWinner(null);
+      setShowScores(null);
+      setGameStatus(null);
+      setCurrentGuessNumber(1)
     }
   };
 
@@ -100,7 +104,7 @@ function App() {
     if (gS !== null) {
       setGameStatus(gS);
     }
-  }, []);
+  }, [formattedDate]);
 
   useEffect(() => {
     if (formattedDate) {
