@@ -228,3 +228,69 @@ p{
   text-align: center;
 }
 
+
+
+
+
+/* Style for the loading screen container */
+.loadingScreen {
+  width: 340px; /* Set the width of the loading screen */
+  height: 200px; /* Full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent; /* You can change this background color */
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Style for the loading logo */
+.loadingLogo {
+  width: 50px; /* Adjust size as needed */
+  height: 50px; /* Adjust size as needed */
+  border-radius: 50%; /* Makes the logo circular */
+  animation: rotate 3s linear infinite; /* Rotate in 3 seconds */
+  background-color: white;
+}
+
+/* Keyframes for logo rotation */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Style for the loading text */
+.loadingScreen p {
+  font-size: 20px;
+  margin-top: 20px;
+  letter-spacing: 2px;
+  color: white;
+  font-family: 'JapaneseFont', sans-serif;
+}
+
+.loadingScreen p::after {
+  content: '.';
+  animation: dots 1s steps(1) infinite;
+}
+
+@keyframes dots {
+  0% {
+    content: '.';
+  }
+  33% {
+    content: '..';
+  }
+  66% {
+    content: '...';
+  }
+  100% {
+    content: '';
+  }
+}
