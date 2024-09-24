@@ -1,6 +1,5 @@
 import "./App.css";
 import React, {useState, useEffect, useRef} from 'react';
-import YouTube from 'react-youtube';
 import GuessDisplay from "./GuessDisplay/GuessDisplay";
 import Graph from "./Graph/Graph";
 import EndGame from "./EndGame/EndGame";
@@ -8,6 +7,7 @@ import Share from "./Share/Share";
 import Help from "./Help/Help";
 import data from "./data.json"
 import LoadingScreen from "./LoadingScreen/LoadingScreen";
+import VideoComponent from "./VideoComponent/VideoComponent";
 
 function App() {
   const [guessList, setGuessList] = useState([]);
@@ -42,7 +42,6 @@ function App() {
   }, []);
 
   const tick = () => {
-    console.log('tick')
     const currentDate = new Date();
     const formattedDateTemp = currentDate.toLocaleDateString('en-US', {
       month: '2-digit',
@@ -115,9 +114,10 @@ function App() {
   useEffect(() => {
     if (formattedDate) {
       // Ensure process.env.answersDB and process.env.animeDB are defined and have the date key
+      console.log(formattedDate)
       const answersDBEntry = data.answers_db?.[formattedDate];
       const animeDB = data.anime_db
-
+      console.log(data.answers_db)
       if (answersDBEntry) {
         setAnswer(answersDBEntry.name);
         setAnswerVideo(answersDBEntry.link);
@@ -210,20 +210,20 @@ function App() {
   const [isPlaying, setIsPlaying] = useState(false);
 
   const handleTogglePlay = () => {
-    const player = playerRef.current.internalPlayer;
-    if (isPlaying) { // If video is playing
-      player.pauseVideo();
-      setIsPlaying(false)
+    const player = playerRef.current;
+    if (isPlaying) {
+      player.pause(); // Pause the video
+      setIsPlaying(false);
     } else {
-      player.playVideo();
-      setIsPlaying(true)
+      player.play(); // Play the video
+      setIsPlaying(true);
     }
   };
 
-  const handleRewindFastForward = (seconds) => {
-    const player = playerRef.current.getInternalPlayer();
-    // Use the YouTube Player API to seek forward or backward by a certain amount of time
-    player.seekTo(player.getCurrentTime() + seconds, true);
+  const handleRestartVideo = () => {
+    const player = playerRef.current; // Access the video element
+    player.currentTime = 0; // Set the current time to 0 (restart the video)
+    // player.play(); // Play the video after resetting
   };
 
   const selectAutofilledAnswer = (name) => {
@@ -305,7 +305,7 @@ function App() {
             {!gameStatus && currentGuessNumber=== 4 && <p className="end-message " >Better Luck Tomorrow!</p>}
             {gameStatus && 
               <>
-                <p className="end-message">  Congrats! You Got Today's Answer in {guessList.length} {currentGuessNumber > 2 ? 'Tries!' : 'Try!'}</p> 
+                <p className="end-message">Congrats! You Got Today's Answer in {guessList.length} {currentGuessNumber > 2 ? 'Tries!' : 'Try!'}</p> 
               </>}
               {filteredList.length > 0 && currentGuess.length > 0 && 
                 <div className="autofill-guess-container" style={{height:(filteredList.length * 40 + 20)+'px', }}> 
@@ -322,7 +322,7 @@ function App() {
           </div>
 
           <div className="video-buttons-container">
-            <button className="video-button" aria-label="restart video" onClick={() => handleRewindFastForward(-10)}><svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em" viewBox="0 0 24 24"><path fill="white" d="M6 13c0-1.65.67-3.15 1.76-4.24L6.34 7.34A8.014 8.014 0 0 0 4 13c0 4.08 3.05 7.44 7 7.93v-2.02c-2.83-.48-5-2.94-5-5.91m14 0c0-4.42-3.58-8-8-8c-.06 0-.12.01-.18.01l1.09-1.09L11.5 2.5L8 6l3.5 3.5l1.41-1.41l-1.08-1.08c.06 0 .12-.01.17-.01c3.31 0 6 2.69 6 6c0 2.97-2.17 5.43-5 5.91v2.02c3.95-.49 7-3.85 7-7.93"/></svg>
+            <button className="video-button" aria-label="restart video" onClick={() => handleRestartVideo()}><svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em" viewBox="0 0 24 24"><path fill="white" d="M6 13c0-1.65.67-3.15 1.76-4.24L6.34 7.34A8.014 8.014 0 0 0 4 13c0 4.08 3.05 7.44 7 7.93v-2.02c-2.83-.48-5-2.94-5-5.91m14 0c0-4.42-3.58-8-8-8c-.06 0-.12.01-.18.01l1.09-1.09L11.5 2.5L8 6l3.5 3.5l1.41-1.41l-1.08-1.08c.06 0 .12-.01.17-.01c3.31 0 6 2.69 6 6c0 2.97-2.17 5.43-5 5.91v2.02c3.95-.49 7-3.85 7-7.93"/></svg>
             </button>
             {isPlaying && <p className="playingText">Playing...</p>}
             {!isPlaying && <p className="playingText">Paused</p>}
@@ -346,7 +346,7 @@ function App() {
             <Help toggleHelp={showHelp}/>
           }
         </div>
-        <YouTube style={{zIndex:'-100', position: 'absolute', top: '0', left: '0'}} videoId={answerVideo} opts={{ playerVars: { autoplay: 0, controls: 0, loop: 1, playlist: answerVideo }, height: '0', width: '0'}} ref={playerRef}/>
+        <VideoComponent ref={playerRef} isPlaying={isPlaying} onTogglePlay={handleTogglePlay} onRestartVideo={handleRestartVideo} answerVideo={answerVideo} height={'0px'} width={'0px'} controls={false}/>
         </>
       )}
     </div>

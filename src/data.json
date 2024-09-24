@@ -1,504 +1,593 @@
 {
   "answers_db": {
-    "07/22/2024": {
-      "name": "naruto",
-      "link": "4t__wczfpRI",
-      "number": 1
-    },
-    "07/23/2024": {
-      "name": "black clover",
-      "link": "_6KZI74zKfE",
-      "number": 2
-    },
-    "07/24/2024": {
-      "name": "one punch man",
-      "link": "erQURy_Ys5Y",
-      "number": 3
-    },
-    "07/25/2024": {
-      "name": "mashle: magic and muscles",
-      "link": "210R0ozmLwg",
-      "number": 4
-    },
-    "07/26/2024": {
-      "name": "jujutsu kaisen",
-      "link": "AQcOdxEmfEg",
-      "number": 5
-    },
-    "07/27/2024": {
-      "name": "tokyo ghoul",
-      "link": "uMeR2W19wT0",
-      "number": 6
-    },
-    "07/28/2024": {
-      "name": "attack on titan",
-      "link": "CID-sYQNCew",
-      "number": 7
-    },
-    "07/29/2024": {
-      "name": "noragami",
-      "link": "aZenmeRytEM",
-      "number": 8
-    },
-    "07/30/2024": {
-      "name": "my hero academia",
-      "link": "v1YojYU5nPQ",
-      "number": 9
-    },
-    "07/31/2024": {
-      "name": "one punch man",
-      "link": "atxYe-nOa9w",
-      "number": 10
-    },
-    "08/01/2024": {
-      "name": "my hero academia",
-      "link": "-77UEct0cZM",
-      "number": 11
-    },
-    "08/02/2024": {
-      "name": "demon slayer",
-      "link": "pmanD_s7G3U",
-      "number": 12
-    },
-    "08/03/2024": {
-      "name": "guilty crown",
-      "link": "DjUtmbZt8zc",
-      "number": 13
-    },
-    "08/04/2024": {
-      "name": "fire force",
-      "link": "JBqxVX_LXvk",
-      "number": 14
-    },
-    "08/05/2024": {
-      "name": "naruto shippuden",
-      "link": "LDDWf1vu9gA",
-      "number": 15
-    },
-    "08/06/2024": {
-      "name": "my hero academia",
-      "link": "l2j1qM7gx54",
-      "number": 16
-    },
-    "08/07/2024": {
-      "name": "mirai nikki",
-      "link": "ql0NtjXIv_s",
-      "number": 17
-    },
-    "08/08/2024": {
-      "name": "naruto shippuden",
-      "link": "eWNNjIIq4TA",
-      "number": 18
-    },
-    "08/09/2024": {
-      "name": "naruto shippuden",
-      "link": "aJRu5ltxXjc",
-      "number": 19
-    },
-    "08/10/2024": {
-      "name": "ping pong the animation",
-      "link": "2v6iOVhw6mQ",
-      "number": 20
-    },
-    "08/11/2024": {
-      "name": "beastars",
-      "link": "bgo9dJB_icw",
-      "number": 21
-    },
-    "08/12/2024": {
-      "name": "my hero academia",
-      "link": "iQGAPewPH1s",
-      "number": 22
-    },
-    "08/13/2024": {
-      "name": "himouto umaru-chan",
-      "link": "b6-2P8RgT0A",
-      "number": 23
-    },
-    "08/14/2024": {
-      "name": "dragon ball super",
-      "link": "S7QsHpLU1Sw",
-      "number": 24
-    },
-    "08/15/2024": {
-      "name": "kemono friends",
-      "link": "xkMdLcB_vNU",
-      "number": 25
-    },
-    "08/16/2024": {
-      "name": "death parade",
-      "link": "UjjTMNDZi-A",
-      "number": 26
-    },
-    "08/17/2024": {
-      "name": "my hero academia",
-      "link": "XhIA35OAIw4",
-      "number": 27
-    },
-    "08/18/2024": {
-      "name": "gintama",
-      "link": "iXpGVuaQwXo",
-      "number": 28
-    },
-    "08/19/2024": {
-      "name": "black clover",
-      "link": "dsK8SsfqdHE",
-      "number": 29
-    },
-    "08/20/2024": {
-      "name": "soul eater",
-      "link": "zzJ8U8OtEsE",
-      "number": 30
-    },
-    "08/21/2024": {
-      "name": "konosuba",
-      "link": "VtfUrDwpo2E",
-      "number": 31
-    },
-    "08/22/2024": {
-      "name": "naruto shippuden",
-      "link": "SavhHnWla6c",
-      "number": 32
-    },
-    "08/23/2024": {
-      "name": "yuri on ice",
-      "link": "ORDXWrL5EuQ",
-      "number": 33
-    },
-    "08/24/2024": {
-      "name": "overlord",
-      "link": "jMoVmSV4yA8",
-      "number": 34
-    },
-    "08/25/2024": {
-      "name": "death note",
-      "link": "8QE9cmfxx4s",
-      "number": 35
-    },
-    "08/26/2024": {
-      "name": "dororo",
-      "link": "FgQR2O8PGf4",
-      "number": 36
-    },
-    "08/27/2024": {
-      "name": "attack on titan",
-      "link": "8OkpRK2_gVs",
-      "number": 37
-    },
-    "08/28/2024": {
-      "name": "attack on titan",
-      "link": "0dK7JgKivQM",
-      "number": 38
-    },
-    "08/29/2024": {
-      "name": "seven deadly sins",
-      "link": "WK-EUELKb9A",
-      "number": 39
-    },
-    "08/30/2024": {
-      "name": "naruto",
-      "link": "SRn99oN1p_c",
-      "number": 40
-    },
-    "08/31/2024": {
-      "name": "naruto shippuden",
-      "link": "vxvP9zSOL7s",
-      "number": 41
-    },
-    "09/01/2024": {
-      "name": "gintama",
-      "link": "-B3rpKfva1w",
-      "number": 42
-    },
-    "09/02/2024": {
-      "name": "code geass",
-      "link": "cZ7zQbMxm28",
-      "number": 43
-    },
-    "09/03/2024": {
-      "name": "yamada and the seven witches",
-      "link": "QHFif7LRylw",
-      "number": 44
-    },
-    "09/04/2024": {
-      "name": "attack on titan",
-      "link": "PbWFpzi8C94",
-      "number": 45
-    },
-    "09/05/2024": {
-      "name": "soul eater",
-      "link": "-eYK3YP524A",
-      "number": 46
-    },
-    "09/06/2024": {
-      "name": "one piece",
-      "link": "Oo52vQyAR6w",
-      "number": 47
-    },
-    "09/07/2024": {
-      "name": "naruto",
-      "link": "xjBTNbEXbAA",
-      "number": 48
-    },
-    "09/08/2024": {
-      "name": "gintama",
-      "link": "REHaJZgWwxY",
-      "number": 49
-    },
-    "09/09/2024": {
-      "name": "lucky star",
-      "link": "03x0bU2w9HI",
-      "number": 50
-    },
-    "09/10/2024": {
-      "name": "dr. stone",
-      "link": "tF4faMbs5oQ",
-      "number": 51
-    },
-    "09/11/2024": {
-      "name": "naruto shippuden",
-      "link": "lGTp4VogNaQ",
-      "number": 52
-    },
-    "09/12/2024": {
-      "name": "kill la kill",
-      "link": "qTIvCBbP8DE",
-      "number": 53
-    },
-    "09/13/2024": {
-      "name": "steins;gate",
-      "link": "0Cs-dVb7c8k",
-      "number": 54
-    },
-    "09/14/2024": {
-      "name": "cowboy bebop",
-      "link": "b4KO1WXHkFQ",
-      "number": 55
-    },
-    "09/15/2024": {
-      "name": "black clover",
-      "link": "L9jA59p4MPk",
-      "number": 56
-    },
-    "09/16/2024": {
-      "name": "made in abyss",
-      "link": "pAF9T-cfKk0",
-      "number": 57
-    },
-    "09/17/2024": {
-      "name": "mob psycho 100",
-      "link": "huFjzUKlVDs",
-      "number": 58
-    },
-    "09/18/2024": {
-      "name": "hunter x hunter",
-      "link": "jT7MNwRJXU8",
-      "number": 59
-    },
-    "09/19/2024": {
-      "name": "a silent voice",
-      "link": "Zp9nCw96uWA",
-      "number": 60
-    },
-    "09/20/2024": {
-      "name": "kaguya-sama",
-      "link": "8SuCpBzbTlY",
-      "number": 61
-    },
-    "09/21/2024": {
-      "name": "steins;gate",
-      "link": "C4J7yQ7Prms",
-      "number": 62
-    },
-    "09/22/2024": {
-      "name": "cowboy bebop",
-      "link": "9Lp2zxfwCOg",
-      "number": 63
-    },
     "09/23/2024": {
-      "name": "fullmetal alchemist",
-      "link": "8SkX3ULd2U4",
-      "number": 64
-    },
-    "09/24/2024": {
-      "name": "trigun",
-      "link": "5PrWh0oLf2E",
+      "name": "attack on titan",
+      "link": "https://animethemes.moe/video/ShingekiNoKyojin-OP1.webm",
       "number": 65
     },
-    "09/25/2024": {
-      "name": "bleach",
-      "link": "8d1wI19Aq0M",
+    "09/24/2024": {
+      "name": "one punch man",
+      "link": "https://animethemes.moe/video/OnePunchMan-OP1.webm",
       "number": 66
     },
-    "09/26/2024": {
-      "name": "food wars",
-      "link": "rZ1oht5os58",
+    "09/25/2024": {
+      "name": "steins;gate",
+      "link": "https://animethemes.moe/video/SteinsGate-OP1.webm",
       "number": 67
     },
-    "09/27/2024": {
-      "name": "re:zero",
-      "link": "PqGnYhnJXdo",
+    "09/26/2024": {
+      "name": "death note",
+      "link": "https://animethemes.moe/video/DeathNote-OP1.webm",
       "number": 68
     },
-    "09/28/2024": {
-      "name": "vagabond",
-      "link": "qC2Fw9mnUmY",
+    "09/27/2024": {
+      "name": "my hero academia",
+      "link": "https://animethemes.moe/video/BokuNoHeroAcademia-OP1-NCBD1080.webm",
       "number": 69
     },
-    "09/29/2024": {
-      "name": "parasyte",
-      "link": "3oY0E_p8RAI",
+    "09/28/2024": {
+      "name": "your name",
+      "link": "https://animethemes.moe/video/KimiNoNaWa-OP1.webm",
       "number": 70
     },
-    "09/30/2024": {
-      "name": "the melancholy of haruhi suzumiya",
-      "link": "pG7Nm3nbdIo",
+    "09/29/2024": {
+      "name": "fullmetal alchemist: brotherhood",
+      "link": "https://animethemes.moe/video/FullmetalAlchemistBrotherhood-OP1.webm",
       "number": 71
     },
-    "10/01/2024": {
-      "name": "clannad",
-      "link": "PywoTWBJBBg",
+    "09/30/2024": {
+      "name": "re:zero starting life in another world",
+      "link": "https://animethemes.moe/video/ReZero-OP1.webm",
       "number": 72
     },
-    "10/02/2024": {
-      "name": "citrus",
-      "link": "KsqYOZcQJmQ",
+    "10/1/2024": {
+      "name": "konosuba",
+      "link": "https://animethemes.moe/video/Konosuba-OP1.webm",
       "number": 73
     },
-    "10/03/2024": {
-      "name": "welcome to the nhk",
-      "link": "gF-nJ2JllY0",
+    "10/2/2024": {
+      "name": "demon slayer",
+      "link": "https://animethemes.moe/video/KimetsuNoYaiba-OP1-NCBD1080.webm",
       "number": 74
     },
-    "10/04/2024": {
-      "name": "angel beats",
-      "link": "4H0Zw48M7Ic",
+    "10/3/2024": {
+      "name": "kaguya-sama: love is war",
+      "link": "https://animethemes.moe/video/KaguyaSamaWaKokurasetai-OP1-NCBD1080.webm",
       "number": 75
     },
-    "10/05/2024": {
+    "10/4/2024": {
       "name": "sword art online",
-      "link": "Rz-v_eH84wQ",
+      "link": "https://animethemes.moe/video/SwordArtOnline-OP1.webm",
       "number": 76
     },
-    "10/06/2024": {
-      "name": "horizons",
-      "link": "W78eH9slXh8",
+    "10/5/2024": {
+      "name": "no game no life",
+      "link": "https://animethemes.moe/video/NoGameNoLife-OP1.webm",
       "number": 77
     },
-    "10/07/2024": {
-      "name": "zom 100",
-      "link": "RzvR4Y54NMo",
+    "10/6/2024": {
+      "name": "toradora!",
+      "link": "https://animethemes.moe/video/Toradora-OP1.webm",
       "number": 78
     },
-    "10/08/2024": {
-      "name": "black lagoon",
-      "link": "NteOESv3fIY",
+    "10/7/2024": {
+      "name": "angel beats!",
+      "link": "https://animethemes.moe/video/AngelBeats-OP1.webm",
       "number": 79
     },
-    "10/09/2024": {
-      "name": "golden kamuy",
-      "link": "lH7bgP8hmp4",
+    "10/8/2024": {
+      "name": "attack on titan",
+      "link": "https://animethemes.moe/video/ShingekiNoKyojinS2-OP1-NCBD1080.webm",
       "number": 80
     },
-    "10/10/2024": {
-      "name": "the ancient magus' bride",
-      "link": "VUkCnFk58t0",
+    "10/9/2024": {
+      "name": "your lie in april",
+      "link": "https://animethemes.moe/video/KimiUso-OP1.webm",
       "number": 81
     },
-    "10/11/2024": {
-      "name": "toradora",
-      "link": "9LuG0gz5gjU",
+    "10/10/2024": {
+      "name": "my hero academia",
+      "link": "https://animethemes.moe/video/BokuNoHeroAcademiaS2-OP1-NCBD1080.webm",
       "number": 82
     },
-    "10/12/2024": {
-      "name": "code geass",
-      "link": "fLepLzO1hZc",
+    "10/11/2024": {
+      "name": "erased",
+      "link": "https://animethemes.moe/video/BokuDakeGaInaiMachi-OP1.webm",
       "number": 83
     },
-    "10/13/2024": {
-      "name": "great teacher onizuka",
-      "link": "8Z02M36P5y8",
+    "10/12/2024": {
+      "name": "a silent voice",
+      "link": "https://animethemes.moe/video/KoeNoKatachi-OP1.webm",
       "number": 84
     },
-    "10/14/2024": {
-      "name": "death note",
-      "link": "KfdU_U4zVNs",
+    "10/13/2024": {
+      "name": "rascal does not dream of bunny girl senpai",
+      "link": "https://animethemes.moe/video/Aobuta-OP1-NCBD1080.webm",
       "number": 85
     },
-    "10/15/2024": {
-      "name": "elfen lied",
-      "link": "Cq4Pz9BczXk",
+    "10/14/2024": {
+      "name": "the promised neverland",
+      "link": "https://animethemes.moe/video/YakusokuNoNeverland-OP1-NCBD1080.webm",
       "number": 86
     },
-    "10/16/2024": {
-      "name": "kakegurui",
-      "link": "Wm_pB40yOD4",
+    "10/15/2024": {
+      "name": "bakemonogatari",
+      "link": "https://animethemes.moe/video/Bakemonogatari-OP1.webm",
       "number": 87
     },
-    "10/17/2024": {
-      "name": "made in abyss",
-      "link": "rOGXos2oqbc",
+    "10/16/2024": {
+      "name": "code geass",
+      "link": "https://animethemes.moe/video/CodeGeass-OP1.webm",
       "number": 88
     },
-    "10/18/2024": {
-      "name": "the promise neverland",
-      "link": "g2soPIQ2dZ0",
+    "10/17/2024": {
+      "name": "mob psycho 100",
+      "link": "https://animethemes.moe/video/MobPsycho100-OP1-BD1080.webm",
       "number": 89
     },
-    "10/19/2024": {
-      "name": "sakamoto desu ga?",
-      "link": "t0G7o7wM5DQ",
+    "10/18/2024": {
+      "name": "konosuba",
+      "link": "https://animethemes.moe/video/KonosubaS2-OP1.webm",
       "number": 90
     },
-    "10/20/2024": {
-      "name": "the quintessential quintuplets",
-      "link": "C2w8QuHgXWQ",
+    "10/19/2024": {
+      "name": "noragami",
+      "link": "https://animethemes.moe/video/Noragami-OP1.webm",
       "number": 91
     },
-    "10/21/2024": {
+    "10/20/2024": {
       "name": "violet evergarden",
-      "link": "0E9Rhl3jQxQ",
+      "link": "https://animethemes.moe/video/VioletEvergarden-OP1-NCBD1080.webm",
       "number": 92
     },
-    "10/22/2024": {
-      "name": "dorohedoro",
-      "link": "4H6ctnQdEoM",
+    "10/21/2024": {
+      "name": "kill la kill",
+      "link": "https://animethemes.moe/video/KillLaKill-OP1.webm",
       "number": 93
     },
-    "10/23/2024": {
-      "name": "gintama",
-      "link": "d8uKPwmTWCE",
+    "10/22/2024": {
+      "name": "my hero academia",
+      "link": "https://animethemes.moe/video/BokuNoHeroAcademiaS3-OP1-NCBD1080.webm",
       "number": 94
     },
-    "10/24/2024": {
-      "name": "beastars",
-      "link": "UN2yDOn95oo",
+    "10/23/2024": {
+      "name": "neon genesis evangelion",
+      "link": "https://animethemes.moe/video/NeonGenesisEvangelion-OP1.webm",
       "number": 95
     },
-    "10/25/2024": {
-      "name": "tengen toppa gurren lagann",
-      "link": "0wdEvZ57Ym4",
+    "10/24/2024": {
+      "name": "attack on titan",
+      "link": "https://animethemes.moe/video/ShingekiNoKyojinS3-OP1-NCBD1080.webm",
       "number": 96
+    },
+    "10/25/2024": {
+      "name": "mahou shoujo madoka★magica",
+      "link": "https://animethemes.moe/video/MadokaMagica-OP1-NCBD1080.webm",
+      "number": 97
+    },
+    "10/26/2024": {
+      "name": "hunter x hunter",
+      "link": "https://animethemes.moe/video/HunterHunter2011-OP1.webm",
+      "number": 98
+    },
+    "10/27/2024": {
+      "name": "miss kobayashi's dragon maid",
+      "link": "https://animethemes.moe/video/KobayashiSanChiNoMaidDragon-OP1-NCBD1080.webm",
+      "number": 99
+    },
+    "10/28/2024": {
+      "name": "my teen romantic comedy: SNAFU",
+      "link": "https://animethemes.moe/video/OreGairu-OP1.webm",
+      "number": 100
+    },
+    "10/29/2024": {
+      "name": "tengen toppa gurren lagann",
+      "link": "https://animethemes.moe/video/TengenToppaGurrenLagann-OP1.webm",
+      "number": 101
+    },
+    "10/30/2024": {
+      "name": "anohana: the flower we saw that day",
+      "link": "https://animethemes.moe/video/Anohana-OP1.webm",
+      "number": 102
+    },
+    "10/31/2024": {
+      "name": "death parade",
+      "link": "https://animethemes.moe/video/DeathParade-OP1.webm",
+      "number": 103
+    },
+    "11/1/2024": {
+      "name": "future diary",
+      "link": "https://animethemes.moe/video/MiraiNikki-OP1.webm",
+      "number": 104
+    },
+    "11/2/2024": {
+      "name": "attack on titan",
+      "link": "https://animethemes.moe/video/ShingekiNoKyojinS3Part2-OP1-NCBD1080.webm",
+      "number": 105
+    },
+    "11/3/2024": {
+      "name": "assassination classroom",
+      "link": "https://animethemes.moe/video/AnsatsuKyoushitsu-OP1.webm",
+      "number": 106
+    },
+    "11/4/2024": {
+      "name": "tokyo ghoul",
+      "link": "https://animethemes.moe/video/TokyoGhoul-OP1.webm",
+      "number": 107
+    },
+    "11/5/2024": {
+      "name": "darling in the franxx",
+      "link": "https://animethemes.moe/video/DarlingInTheFranXX-OP1-NCBD1080.webm",
+      "number": 108
+    },
+    "11/6/2024": {
+      "name": "made in abyss",
+      "link": "https://animethemes.moe/video/MadeInAbyss-OP1.webm",
+      "number": 109
+    },
+    "11/7/2024": {
+      "name": "k-on!",
+      "link": "https://animethemes.moe/video/KOn-OP1.webm",
+      "number": 110
+    },
+    "11/8/2024": {
+      "name": "jojo's bizarre adventure",
+      "link": "https://animethemes.moe/video/JojoNoKimyouNaBouken-OP1.webm",
+      "number": 111
+    },
+    "11/9/2024": {
+      "name": "fate/zero",
+      "link": "https://animethemes.moe/video/FateZero-OP1.webm",
+      "number": 112
+    },
+    "11/10/2024": {
+      "name": "sword art online",
+      "link": "https://animethemes.moe/video/SwordArtOnlineS2-OP1.webm",
+      "number": 113
+    },
+    "11/11/2024": {
+      "name": "love, chubinyou, and other delusions",
+      "link": "https://animethemes.moe/video/Chuunibyou-OP1.webm",
+      "number": 114
+    },
+    "11/12/2024": {
+      "name": "hyouka",
+      "link": "https://animethemes.moe/video/Hyouka-OP1.webm",
+      "number": 115
+    },
+    "11/13/2024": {
+      "name": "parasyte: the maxim",
+      "link": "https://animethemes.moe/video/Kiseijuu-OP1.webm",
+      "number": 116
+    },
+    "11/14/2024": {
+      "name": "psycho pass",
+      "link": "https://animethemes.moe/video/PsychoPass-OP1.webm",
+      "number": 117
+    },
+    "11/15/2024": {
+      "name": "cowboy bebop",
+      "link": "https://animethemes.moe/video/CowboyBebop-OP1.webm",
+      "number": 118
+    },
+    "11/16/2024": {
+      "name": "dr. stone",
+      "link": "https://animethemes.moe/video/DrStone-OP1-NCBD1080.webm",
+      "number": 119
+    },
+    "11/17/2024": {
+      "name": "the rising of the shield hero",
+      "link": "https://animethemes.moe/video/ShieldHero-OP1-NCBD1080.webm",
+      "number": 120
+    },
+    "11/18/2024": {
+      "name": "mob psycho 100",
+      "link": "https://animethemes.moe/video/MobPsycho100S2-OP1-BD1080.webm",
+      "number": 121
+    },
+    "11/19/2024": {
+      "name": "clannad",
+      "link": "https://animethemes.moe/video/Clannad-OP1.webm",
+      "number": 122
+    },
+    "11/20/2024": {
+      "name": "the devil is a part-Timer!",
+      "link": "https://animethemes.moe/video/HatarakuMaouSama-OP1.webm",
+      "number": 123
+    },
+    "11/21/2024": {
+      "name": "naruto",
+      "link": "https://animethemes.moe/video/Naruto-OP1.webm",
+      "number": 124
+    },
+    "11/22/2024": {
+      "name": "akame ga kill!",
+      "link": "https://animethemes.moe/video/AkameGaKill-OP1.webm",
+      "number": 125
+    },
+    "11/23/2024": {
+      "name": "the melancholy of haruhi suzumiya",
+      "link": "https://animethemes.moe/video/SuzumiyaHaruhiNoYuuutsu-OP1.webm",
+      "number": 126
+    },
+    "11/24/2024": {
+      "name": "the seven deadly sins",
+      "link": "https://animethemes.moe/video/NanatsuNoTaizai-OP1.webm",
+      "number": 127
+    },
+    "11/25/2024": {
+      "name": "charlotte",
+      "link": "https://animethemes.moe/video/Charlotte-OP1.webm",
+      "number": 128
+    },
+    "11/26/2024": {
+      "name": "the pet girl of sakurasou",
+      "link": "https://animethemes.moe/video/Sakurasou-OP1.webm",
+      "number": 129
+    },
+    "11/27/2024": {
+      "name": "overlord",
+      "link": "https://animethemes.moe/video/Overlord-OP1.webm",
+      "number": 130
+    },
+    "11/28/2024": {
+      "name": "one punch man",
+      "link": "https://animethemes.moe/video/OnePunchManS2-OP1-NCBD1080.webm",
+      "number": 131
+    },
+    "11/29/2024": {
+      "name": "haikyuu!!",
+      "link": "https://animethemes.moe/video/Haikyuu-OP1.webm",
+      "number": 132
+    },
+    "11/30/2024": {
+      "name": "that time i got reincarnated as a slime",
+      "link": "https://animethemes.moe/video/Tensura-OP1-NCBD1080.webm",
+      "number": 133
+    },
+    "12/1/2024": {
+      "name": "code geass:  lelouch of the rebellion",
+      "link": "https://animethemes.moe/video/CodeGeassR2-OP1.webm",
+      "number": 134
+    },
+    "12/2/2024": {
+      "name": "kaguya-sama: love is war",
+      "link": "https://animethemes.moe/video/KaguyaSamaWaKokurasetaiS2-OP1-NCBD1080.webm",
+      "number": 135
+    },
+    "12/3/2024": {
+      "name": "food wars!",
+      "link": "https://animethemes.moe/video/ShokugekiNoSouma-OP1.webm",
+      "number": 136
+    },
+    "12/4/2024": {
+      "name": "nichijou",
+      "link": "https://animethemes.moe/video/Nichijou-OP1.webm",
+      "number": 137
+    },
+    "12/5/2024": {
+      "name": "is it wrong to pick up girls in a dungeon",
+      "link": "https://animethemes.moe/video/DanMachi-OP1.webm",
+      "number": 138
+    },
+    "12/6/2024": {
+      "name": "durarara!!",
+      "link": "https://animethemes.moe/video/Durarara-OP1.webm",
+      "number": 139
+    },
+    "12/7/2024": {
+      "name": "my hero academia",
+      "link": "https://animethemes.moe/video/BokuNoHeroAcademiaS4-OP1-NCBD1080.webm",
+      "number": 140
+    },
+    "12/8/2024": {
+      "name": "fire force",
+      "link": "https://animethemes.moe/video/EnenNoShouboutai-OP1-NCBD1080.webm",
+      "number": 141
+    },
+    "12/9/2024": {
+      "name": "nisemonogatari",
+      "link": "https://animethemes.moe/video/Nisemonogatari-OP1.webm",
+      "number": 142
+    },
+    "12/10/2024": {
+      "name": "nisekoi",
+      "link": "https://animethemes.moe/video/Nisekoi-OP1.webm",
+      "number": 143
+    },
+    "12/11/2024": {
+      "name": "spirited away",
+      "link": "https://animethemes.moe/video/SenToChihiroNoKamikakushi-ED1.webm",
+      "number": 144
+    },
+    "12/12/2024": {
+      "name": "my teen romantic comedy: SNAFU",
+      "link": "https://animethemes.moe/video/OreGairuS2-OP1.webm",
+      "number": 145
+    },
+    "12/13/2024": {
+      "name": "kakegurui",
+      "link": "https://animethemes.moe/video/Kakegurui-OP1-NCBD1080.webm",
+      "number": 146
+    },
+    "12/14/2024": {
+      "name": "noragami aragoto",
+      "link": "https://animethemes.moe/video/NoragamiAragoto-OP1.webm",
+      "number": 147
+    },
+    "12/15/2024": {
+      "name": "fate/zero",
+      "link": "https://animethemes.moe/video/FateZeroS2-OP1.webm",
+      "number": 148
+    },
+    "12/16/2024": {
+      "name": "beyond the boundary",
+      "link": "https://animethemes.moe/video/KyoukaiNoKanata-OP1.webm",
+      "number": 149
+    },
+    "12/17/2024": {
+      "name": "naruto: shippuuden",
+      "link": "https://animethemes.moe/video/NarutoShippuuden-OP1.webm",
+      "number": 150
+    },
+    "12/18/2024": {
+      "name": "vinland saga",
+      "link": "https://animethemes.moe/video/VinlandSaga-OP1-NCBD1080.webm",
+      "number": 151
+    },
+    "12/19/2024": {
+      "name": "jojo's bizarre adventure: stardust crusaders",
+      "link": "https://animethemes.moe/video/JojoNoKimyouNaBoukenS2-OP1.webm",
+      "number": 152
+    },
+    "12/20/2024": {
+      "name": "fate/stay night: unlimited blade works",
+      "link": "https://animethemes.moe/video/FateStayNightUBW-OP1.webm",
+      "number": 153
+    },
+    "12/21/2024": {
+      "name": "a place further than the universe",
+      "link": "https://animethemes.moe/video/Yorimoi-OP1-NCBD1080.webm",
+      "number": 154
+    },
+    "12/22/2024": {
+      "name": "march comes in like a lion",
+      "link": "https://animethemes.moe/video/SangatsuNoLion-OP1.webm",
+      "number": 155
+    },
+    "12/23/2024": {
+      "name": "soul eater",
+      "link": "https://animethemes.moe/video/SoulEater-OP1.webm",
+      "number": 156
+    },
+    "12/24/2024": {
+      "name": "jujutsu kaisen",
+      "link": "https://animethemes.moe/video/JujutsuKaisen-OP1-NCBD1080.webm",
+      "number": 157
+    },
+    "12/25/2024": {
+      "name": "another",
+      "link": "https://animethemes.moe/video/Another-OP1.webm",
+      "number": 158
+    },
+    "12/26/2024": {
+      "name": "blue exorcist",
+      "link": "https://animethemes.moe/video/AoNoExorcist-OP1.webm",
+      "number": 159
+    },
+    "12/27/2024": {
+      "name": "the saga of tanya the evil",
+      "link": "https://animethemes.moe/video/YoujoSenki-OP1.webm",
+      "number": 160
+    },
+    "12/28/2024": {
+      "name": "monogatari series: second season",
+      "link": "https://animethemes.moe/video/MonogatariSS-OP1.webm",
+      "number": 161
+    },
+    "12/29/2024": {
+      "name": "dororo",
+      "link": "https://animethemes.moe/video/Dororo2019-OP1-NCBD1080.webm",
+      "number": 162
+    },
+    "12/30/2024": {
+      "name": "spice and wolf",
+      "link": "https://animethemes.moe/video/OokamiToKoushinryou-OP1.webm",
+      "number": 163
+    },
+    "12/31/2024": {
+      "name": "steins;gate 0",
+      "link": "https://animethemes.moe/video/SteinsGateZero-OP1-NCBD1080Lyrics.webm",
+      "number": 164
     }
-    
   },
   "anime_db": [
-    "naruto", "black clover", "naruto shippuden", "one punch man", "death parade", 
-    "hunter x hunter", "jujutsu kaisen", "cowboy bebop", "soul eater", "attack on titan", 
-    "parasyte", "my hero academia", "one piece", "joJo's bizarre adventure", "death note", 
-    "steins;gate", "re:zero", "sword art online", "yuri on ice", "code geass", "bleach", 
-    "fairy tail", "full metal alchemist", "pokemon", "akame ga kill", "assassination classroom", 
-    "classroom of the elite", "mashle: magic and muscles", "promised neverland", "fire force", 
-    "made in abyss", "food wars!", "overlord", "noragami", "tokyo ghoul", "tokyo revengers", 
-    "dororo", "gintama", "dorohedoro", "hellsing", "fruits basket", "baki", "barakamon", 
-    "bakuman", "samurai champloo", "afro samurai", "neon genesis evangelion", "persona 5", 
-    "mob psycho 100", "terror in resonance", "cyberpunk: edgerunners", "psycho-pass", 
-    "edens zero", "demon slayer", "guilty crown", "himouto umaru-chan", "dragon ball super", 
-    "kemono friends", "mirai nikki", "beastars", "vagabond", "kaguya-sama", "lucky star", 
-    "dr. stone", "kill la kill", "a silent voice", "clannad", "citrus", "welcome to the nhk", 
-    "angel beats", "horizons", "zom 100", "black lagoon", "golden kamuy", 
-    "the ancient magus' bride", "toradora", "great teacher onizuka", "elfen lied", 
-    "kakegurui", "sakamoto desu ga?", "the quintessential quintuplets", "violet evergarden", 
-    "tengen toppa gurren lagann", "ping pong the animation"
+    "attack on titan",
+    "one punch man",
+    "steins;gate",
+    "death note",
+    "my hero academia",
+    "your name",
+    "fullmetal alchemist: brotherhood",
+    "re:zero starting life in another world",
+    "konosuba",
+    "demon slayer",
+    "sword art online",
+    "no game no life",
+    "toradora!",
+    "angel beats!",
+    "your lie in april",
+    "erased",
+    "a silent voice",
+    "rascal does not dream of bunny girl senpai",
+    "the promised neverland",
+    "bakemonogatari",
+    "code geass",
+    "noragami",
+    "violet evergarden",
+    "kill la kill",
+    "neon genesis evangelion",
+    "puella magi madoka magica",
+    "hunter x hunter",
+    "miss kobayashi's dragon maid",
+    "tengen toppa gurren lagann",
+    "anohana: the flower we saw that day",
+    "death parade",
+    "future diary",
+    "assassination classroom",
+    "tokyo ghoul",
+    "darling in the franxx",
+    "made in abyss",
+    "k-on!",
+    "jojo's bizarre adventure",
+    "love, chubinyou, and other delusions",
+    "hyouka",
+    "parasyte: the maxim",
+    "psycho pass",
+    "cowboy bebop",
+    "dr. stone",
+    "the rising of the shield hero",
+    "mob psycho 100",
+    "clannad",
+    "the devil is a part-Timer!",
+    "naruto",
+    "akame ga kill!",
+    "the melancholy of haruhi suzumiya",
+    "the seven deadly sins",
+    "charlotte",
+    "the pet girl of sakurasou",
+    "overlord",
+    "haikyuu!!",
+    "that time i got reincarnated as a slime",
+    "code geass:  lelouch of the rebellion",
+    "kaguya-sama: love is war",
+    "food wars!",
+    "nichijou",
+    "is it wrong to try to pick up girls in a dungeon",
+    "durarara!!",
+    "fire force",
+    "nisemonogatari",
+    "nisekoi",
+    "spirited away",
+    "my teen romantic comedy: SNAFU",
+    "kakegurui",
+    "noragami aragoto",
+    "fate/zero",
+    "beyond the boundary",
+    "naruto: shippuuden",
+    "vinland saga",
+    "jojo's bizarre adventure: stardust crusaders",
+    "fate/stay night: unlimited blade works",
+    "a place further than the universe",
+    "march comes in like a lion",
+    "soul eater",
+    "jujutsu kaisen",
+    "another",
+    "blue exorcist",
+    "the saga of tanya the evil",
+    "monogatari series: second season",
+    "dororo",
+    "spice and wolf",
+    "steins;gate 0"
   ]
 }

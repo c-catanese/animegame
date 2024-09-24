@@ -98,7 +98,8 @@ nav{
   flex-direction: column;
   margin-top: 100px;
   width: 340px;
-  height: 240px;
+  min-height: 240px;
+  height: fit-content;
 }
 
 
@@ -136,7 +137,8 @@ nav{
   border-top: 0px;
   border-left: 0px;
   border-right: 0px;
-  height: 40px;
+  min-height: 40px;
+  height: fit-content;
   text-align: start;
   border-radius: 10px;
   cursor: pointer;
@@ -226,4 +228,9 @@ p{
 .playingText{
   color: white;
   text-align: center;
+}
+
+
+.guess-input::placeholder {
+  color: black; 
 }
