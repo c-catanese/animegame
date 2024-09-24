@@ -7,6 +7,7 @@ import EndGame from "./EndGame/EndGame";
 import Share from "./Share/Share";
 import Help from "./Help/Help";
 import data from "./data.json"
+import LoadingScreen from "./LoadingScreen/LoadingScreen";
 
 function App() {
   const [guessList, setGuessList] = useState([]);
@@ -269,10 +270,7 @@ function App() {
   return (
     <div className="app">
       {!isReady && (
-        <div className="loadingScreen">
-          <img className="loadingLogo" src="/weebleLogo.png" alt="error"/>
-          <p>Loading</p>
-        </div>
+        <LoadingScreen/>
       )}
       {isReady && (
         <>

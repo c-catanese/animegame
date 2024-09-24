@@ -1,0 +1,58 @@
+.loadingScreen {
+  width: 340px; 
+  height: 200px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent; 
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.loadingLogo {
+  width: 50px; 
+  height: 50px; 
+  border-radius: 50%; 
+  animation: rotate 4s linear infinite; 
+  background-color: white;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loadingScreen p {
+  font-size: 20px;
+  margin-top: 20px;
+  letter-spacing: 2px;
+  color: white;
+  font-family: 'JapaneseFont', sans-serif;
+}
+
+.loadingScreen p::after {
+  content: '.';
+  animation: dots 1s steps(1) infinite;
+}
+
+@keyframes dots {
+  0% {
+    content: '.';
+  }
+  33% {
+    content: '..';
+  }
+  66% {
+    content: '...';
+  }
+  100% {
+    content: '';
+  }
+}
