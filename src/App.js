@@ -27,7 +27,7 @@ function App() {
   const [graphButtonAvail, setGraphButtonAvail] = useState(null)
   const [gameNumber, setGameNumber] = useState(0);
   const [isReady, setIsReady] = useState(false);
-
+  console.log(data.json)
   useEffect(() => {
     setTimeout(() => {
       setIsReady(true);
@@ -265,6 +265,8 @@ function App() {
       console.log('error')
     }
   }
+
+
 
   
   return (
