@@ -1,33 +1,113 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --color-correct: #4a9e6e;
+  --color-wrong: #9e3344;
+  --color-text: #fff;
+  --color-text-muted: rgba(255, 255, 255, 0.5);
+  --color-overlay: rgba(0, 0, 0, 0.5);
+  --color-glass: rgba(20, 12, 35, 0.5);
+  --color-glass-border: rgba(255, 255, 255, 0.12);
+  --color-glass-strong: rgba(20, 12, 35, 0.6);
+  --color-sakura: #e8879b;
+  --color-sakura-dark: #c46b80;
+  --max-width: 420px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
 html, body {
   margin: 0;
   padding: 0;
   height: 100%;
+  overflow-x: hidden;
 }
 
 body {
-  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background: #4a8fbf;
 }
 
-html {
-  background: rgb(237,68,54);
-  /* background: linear-gradient(336deg, rgba(237,68,54,1) 7%, rgba(37,46,86,1) 57%, rgba(14,29,76,1) 80%); */
-  background-color: black;
-  min-height: 100%;
+/* ============================================
+   PAGE LAYOUT
+   ============================================ */
+.page-layout {
+  position: relative;
+  z-index: 20;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.game-wrapper {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  width: 100%;
+  max-width: calc(var(--max-width) + 32px);
+  margin: 0 auto;
+}
+
+/* Ad slots */
+.ad-slot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.12);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.ad-slot-top {
+  width: 100%;
+  max-width: 728px;
+  height: 50px;
+  margin: 0 auto;
+  border-radius: 0 0 12px 12px;
+}
+
+.ad-slot-bottom {
+  width: 100%;
+  max-width: 728px;
+  height: 50px;
+  margin: 0 auto;
+  border-radius: 12px 12px 0 0;
+  margin-top: auto;
+}
+
+.ad-slot-right {
+  display: none;
+}
+
+/* Desktop layout */
+@media (min-width: 900px) {
+  .game-wrapper {
+    max-width: none;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .ad-slot-top,
+  .ad-slot-bottom {
+    display: none;
+  }
+
+  .ad-slot-right {
+    display: flex;
+    position: sticky;
+    top: 20px;
+    width: 160px;
+    min-height: 600px;
+    border-radius: 12px;
+    flex-shrink: 0;
+    margin-top: 20px;
+  }
 }

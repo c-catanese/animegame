@@ -1,63 +1,79 @@
 .blurBackground {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);  /* Adjust the blur amount as needed */
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: var(--color-overlay);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   z-index: 999;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-
-.container{
-  position: fixed;
+.container {
+  width: 90%;
+  max-width: 380px;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   align-items: flex-start;
-  width: 340px;
-  height: 365px;
-  top: 48%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 8;
-  border-radius: 10px;
-  background-color: #9b9fb5;
+  background: rgba(30, 15, 50, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  padding: 16px 20px 24px;
   font-family: 'JapaneseFont', sans-serif;
   font-size: 12pt;
 }
 
-.closeButton{
-  background-color: transparent;
-  color: black;
+.closeButton {
+  background: transparent;
+  color: var(--color-text-muted);
   outline: none;
   border: none;
-  margin-left: 310px;
+  align-self: flex-end;
   font-size: 14pt;
   cursor: pointer;
-  margin-top: 5px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+  transition: color 0.2s;
+}
+
+.closeButton:hover {
+  color: var(--color-text);
 }
 
 .row {
   display: flex;
   text-align: left;
   align-items: center;
-  margin: 0 20px 0 20px;
+  margin: 6px 0;
 }
 
-.rowText{
-  margin-left: 20px;
-  color: black;
-  margin-top: 10px;
-  width: 250px;
-  margin-bottom: 10px;
+.row svg {
+  flex-shrink: 0;
 }
 
-a{
-  color: black;
+.row svg path {
+  fill: var(--color-sakura) !important;
+  stroke: var(--color-sakura) !important;
+}
+
+.rowText {
+  margin-left: 16px;
+  color: var(--color-text);
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 11pt;
+  line-height: 1.5;
+}
+
+.container a {
+  color: var(--color-sakura);
   text-decoration: none;
+  transition: color 0.2s;
+}
+
+.container a:hover {
+  color: var(--color-text);
 }
