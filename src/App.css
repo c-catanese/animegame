@@ -317,22 +317,44 @@ nav {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
-/* ====== SHOW ANSWER BUTTON ====== */
-.showAnswerButton {
+/* ====== END BUTTONS ====== */
+.endButtons {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+  width: 100%;
+  justify-content: center;
+}
+
+.showAnswerButton,
+.shareButton {
   color: #fff;
-  background: rgba(244, 167, 185, 0.25);
-  border: 1px solid rgba(244, 167, 185, 0.4);
   border-radius: 10px;
   cursor: pointer;
   font-size: 0.875rem;
-  margin-top: 14px;
-  padding: 8px 24px;
+  padding: 10px 24px;
   transition: background 0.2s;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
+  flex: 1;
+  max-width: 180px;
+}
+
+.showAnswerButton {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .showAnswerButton:hover {
-  background: rgba(244, 167, 185, 0.4);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.shareButton {
+  background: rgba(244, 167, 185, 0.3);
+  border: 1px solid rgba(244, 167, 185, 0.4);
+}
+
+.shareButton:hover {
+  background: rgba(244, 167, 185, 0.45);
 }
