@@ -38,7 +38,7 @@ function BarChart({ data, isPercentage }) {
 }
 
 function Graph({ userRecord, showScoreboard }) {
-  const [activeTab, setActiveTab] = useState('you');
+  const [activeTab, setActiveTab] = useState('daily');
   const [dailyScores, setDailyScores] = useState(null);
   const [loading, setLoading] = useState(false);
 
@@ -109,16 +109,8 @@ function Graph({ userRecord, showScoreboard }) {
 
         {activeTab === 'daily' && (
           <>
-            {loading && <p className={styles.stats}>Loading...</p>}
-            {!loading && dailyPcts && (
-              <>
-                <BarChart data={dailyPcts} isPercentage={true} />
-                <p className={styles.stats}>Today's results</p>
-              </>
-            )}
-            {!loading && !dailyPcts && (
-              <p className={styles.stats}>No scores yet today</p>
-            )}
+            <BarChart data={dailyPcts || { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, x: 0 }} isPercentage={true} />
+            <p className={styles.stats}>{loading ? 'Loading...' : "Today's results"}</p>
           </>
         )}
       </div>
