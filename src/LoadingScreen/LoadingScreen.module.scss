@@ -17,10 +17,7 @@
 .loadingLogo {
   width: 60px;
   height: 60px;
-  border-radius: 50%;
   animation: rotate 4s linear infinite;
-  background-color: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 4px 20px rgba(244, 167, 185, 0.4);
 }
 
 @keyframes rotate {
