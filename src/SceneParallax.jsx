@@ -9,10 +9,8 @@ import './SceneParallax.css';
 // ============================================
 
 const LAYERS = [
-  { src: '/scene/sky.webp',        pos: 'center 40%',  depth: 0.006, className: 'layer-sky' },
-  { src: '/scene/scene.webp',      pos: 'center 50%',  depth: 0.016, className: 'layer-mid' },
-  { src: '/scene/water.webp',      pos: 'center 70%',  depth: 0.012, className: 'layer-water' },
-  { src: '/scene/foreground.webp', pos: 'center 50%',  depth: 0.035, className: 'layer-fg' },
+  { src: '/scene/background.webp', depth: 0.006, className: 'layer-bg' },
+  { src: '/scene/foreground.webp', depth: 0.03,  className: 'layer-fg' },
 ];
 
 const PETAL_COUNT = 120;
@@ -162,12 +160,7 @@ function SceneParallax() {
           className={`parallax-layer ${layer.className}`}
           ref={el => layerEls.current[i] = el}
         >
-          <img
-            src={layer.src}
-            alt=""
-            draggable={false}
-            style={{ objectPosition: layer.pos }}
-          />
+          <img src={layer.src} alt="" draggable={false} />
         </div>
       ))}
       <canvas ref={petalCanvas} className="parallax-petals" />
