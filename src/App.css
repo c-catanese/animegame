@@ -14,15 +14,14 @@
 
 /* ====== APP CONTAINER ====== */
 .app {
-  font-family: 'JapaneseFont', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
   text-align: center;
   width: 100%;
   max-width: var(--max-width);
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 16px;
+  padding: 0 16px 60px;
 }
 
 /* ====== HEADER ====== */
@@ -41,6 +40,7 @@
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 16px;
+  font-family: 'JapaneseFont', sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -100,13 +100,16 @@ nav {
   display: flex;
   gap: 8px;
   align-items: center;
+  min-width: 76px;
+  justify-content: flex-end;
 }
 
 .leftHeaderButtonContainer {
   display: flex;
   gap: 8px;
   align-items: center;
-  min-width: 42px;
+  min-width: 76px;
+  justify-content: flex-start;
 }
 
 /* ====== GAME CONTAINER ====== */
@@ -140,7 +143,7 @@ nav {
   border-radius: 12px;
   padding: 0 16px;
   font-size: 14pt;
-  font-family: 'JapaneseFont', sans-serif;
+  font-family: inherit;
   margin-bottom: 0;
   z-index: 2;
   transition: border-color 0.2s, box-shadow 0.2s;
@@ -159,11 +162,12 @@ nav {
 
 /* ====== AUTOCOMPLETE ====== */
 .autofill-guess-container {
-  position: relative;
-  margin-top: -14px;
+  position: absolute;
+  top: 100%;
+  left: 0;
   width: 100%;
-  z-index: 1;
-  margin-bottom: 16px;
+  z-index: 10;
+  margin-top: -14px;
   overflow: hidden;
   border-radius: 0 0 12px 12px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
@@ -179,7 +183,7 @@ nav {
   width: 100%;
   outline: none;
   font-size: 11pt;
-  font-family: 'JapaneseFont', sans-serif;
+  font-family: inherit;
   border: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
   min-height: 44px;
@@ -261,7 +265,7 @@ nav {
 
 .app .playingText {
   color: rgba(255, 255, 255, 0.8);
-  font-size: 12px;
+  font-size: 0.75rem;
   letter-spacing: 1px;
   margin: 0;
   min-width: 65px;
@@ -278,7 +282,7 @@ nav {
   margin-top: 14px;
   margin-bottom: 0;
   border-radius: 12px;
-  font-size: 13pt;
+  font-size: 0.9375rem;
   z-index: 2;
   color: #fff;
   text-align: center;
@@ -292,13 +296,12 @@ nav {
 
 /* ====== SHOW ANSWER BUTTON ====== */
 .showAnswerButton {
-  font-family: 'JapaneseFont', sans-serif;
   color: #fff;
   background: rgba(244, 167, 185, 0.25);
   border: 1px solid rgba(244, 167, 185, 0.4);
   border-radius: 10px;
   cursor: pointer;
-  font-size: 12pt;
+  font-size: 0.875rem;
   margin-top: 14px;
   padding: 8px 24px;
   transition: background 0.2s;

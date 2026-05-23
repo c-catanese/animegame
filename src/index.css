@@ -1,6 +1,6 @@
 :root {
   --color-correct: #4a9e6e;
-  --color-wrong: #9e3344;
+  --color-wrong: #c0394f;
   --color-text: #fff;
   --color-text-muted: rgba(255, 255, 255, 0.5);
   --color-overlay: rgba(0, 0, 0, 0.5);
@@ -39,12 +39,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 .game-wrapper {
   display: flex;
   justify-content: center;
-  flex: 1;
   width: 100%;
   max-width: calc(var(--max-width) + 32px);
   margin: 0 auto;
@@ -52,7 +52,7 @@ body {
 
 /* Ad slots */
 .ad-slot {
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   background: rgba(0, 0, 0, 0.12);
@@ -66,20 +66,24 @@ body {
 }
 
 .ad-slot-top {
-  width: 100%;
-  max-width: 728px;
-  height: 50px;
-  margin: 0 auto;
-  border-radius: 0 0 12px 12px;
+  display: none;
 }
 
 .ad-slot-bottom {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
   width: 100%;
   max-width: 728px;
   height: 50px;
-  margin: 0 auto;
   border-radius: 12px 12px 0 0;
-  margin-top: auto;
+  z-index: 30;
+}
+
+.ad-slot-left {
+  display: none;
 }
 
 .ad-slot-right {
@@ -88,26 +92,35 @@ body {
 
 /* Desktop layout */
 @media (min-width: 900px) {
-  .game-wrapper {
-    max-width: none;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 24px;
+  .ad-slot-top {
+    display: none;
   }
 
-  .ad-slot-top,
   .ad-slot-bottom {
-    display: none;
+    display: flex;
+  }
+
+  .ad-slot-left {
+    display: flex;
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 160px;
+    min-height: 600px;
+    border-radius: 0 12px 12px 0;
+    z-index: 30;
   }
 
   .ad-slot-right {
     display: flex;
-    position: sticky;
-    top: 20px;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
     width: 160px;
     min-height: 600px;
-    border-radius: 12px;
-    flex-shrink: 0;
-    margin-top: 20px;
+    border-radius: 12px 0 0 12px;
+    z-index: 30;
   }
 }

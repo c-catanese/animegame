@@ -12,7 +12,7 @@ function EndGame({ winner, setWinner, answer, guessList, answerVideo, getDisplay
   return (
     <div className={styles.blurBackground} onClick={() => setWinner(null)}>
       <div className={styles.endGame} onClick={(e) => e.stopPropagation()}>
-        <button className={styles.closeEndGame} aria-label="close" onClick={() => setWinner(null)}>X</button>
+        <button className={styles.closeEndGame} aria-label="close" onClick={() => setWinner(null)}>&times;</button>
         {winner
           ? <p style={{ width: '250px' }}>Congrats! <br /> You Got Today's Answer in {guessList.length} {guessList.length > 1 ? 'Tries!' : 'Try!'}</p>
           : <p style={{ width: '250px' }}>Nice Try!<br />Better Luck Tomorrow!</p>

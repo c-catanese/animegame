@@ -1,32 +1,29 @@
 .guessInfo {
   width: 100%;
-  min-height: 56px;
   height: fit-content;
-  border-radius: 12px;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 14pt;
+  padding: 6px 0 8px;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .guessNumber {
   color: rgba(255, 255, 255, 0.7);
-  font-size: 11pt;
-  margin-top: 6px;
-  margin-bottom: 0;
+  font-size: 0.6875rem;
+  margin: 0;
   letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .guessName {
   color: var(--color-text);
-  font-size: 14pt;
-  margin-top: 4px;
-  margin-bottom: 6px;
+  font-size: 0.9375rem;
+  margin: 4px 0 0;
   width: 90%;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }

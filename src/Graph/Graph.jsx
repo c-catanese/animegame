@@ -1,14 +1,46 @@
-import React, { useEffect, useRef } from 'react';
-import styles from "./Graph.module.scss"
-import * as d3 from 'd3';
+import React, { useEffect, useState } from 'react';
+import styles from "./Graph.module.scss";
+import { fetchDailyScores } from "../supabase";
 
-const TEXT_COLOR = '#f0e6d3';
+const KEYS = ['1', '2', '3', '4', '5', 'x'];
 const BAR_COLOR = '#f4a7b9';
-const GRID_COLOR = 'rgba(255, 255, 255, 0.1)';
-const AXIS_COLOR = 'rgba(255, 255, 255, 0.2)';
+const BAR_COLOR_FAIL = 'rgba(255, 255, 255, 0.15)';
+
+function BarChart({ data, isPercentage }) {
+  const maxValue = Math.max(...KEYS.map(k => data[k] || 0), 1);
+
+  return (
+    <div className={styles.chart}>
+      {KEYS.map(key => {
+        const value = data[key] || 0;
+        const heightPct = maxValue > 0 ? (value / maxValue) * 100 : 0;
+        const label = isPercentage ? `${value}%` : value;
+        const isX = key === 'x';
+
+        return (
+          <div key={key} className={styles.barColumn}>
+            <span className={styles.barValue}>{label}</span>
+            <div className={styles.barTrack}>
+              <div
+                className={styles.bar}
+                style={{
+                  height: `${Math.max(heightPct, 4)}%`,
+                  backgroundColor: isX ? BAR_COLOR_FAIL : BAR_COLOR,
+                }}
+              />
+            </div>
+            <span className={styles.barLabel}>{isX ? 'X' : key}</span>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
 
 function Graph({ userRecord, showScoreboard }) {
-  const chartRef = useRef(null);
+  const [activeTab, setActiveTab] = useState('you');
+  const [dailyScores, setDailyScores] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const handleKeyDown = (e) => { if (e.key === 'Escape') showScoreboard(); };
@@ -17,117 +49,81 @@ function Graph({ userRecord, showScoreboard }) {
   }, [showScoreboard]);
 
   useEffect(() => {
-    const currentChartRef = chartRef.current;
-    d3.select(currentChartRef).selectAll("svg").remove();
+    if (activeTab === 'daily' && !dailyScores) {
+      setLoading(true);
+      fetchDailyScores().then(scores => {
+        setDailyScores(scores);
+        setLoading(false);
+      });
+    }
+  }, [activeTab, dailyScores]);
 
-    const margin = { top: 20, right: 20, bottom: 20, left: 20 };
-    const width = 300 - margin.left - margin.right;
-    const height = 300 - margin.top - margin.bottom;
-
-    const svg = d3.select(currentChartRef).append("svg")
-      .attr("width", width + margin.left + margin.right)
-      .attr("height", height + margin.top + margin.bottom)
-      .append("g")
-      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-    const maxValue = d3.max(Object.values(userRecord));
-    const keys = Object.keys(userRecord).reverse();
-
-    const x = d3.scaleLinear()
-      .range([0, width])
-      .domain([0, maxValue]);
-
-    const y = d3.scaleBand()
-      .range([height, 0])
-      .padding(0.15)
-      .domain(keys);
-
-    const xAxis = d3.axisBottom(x).ticks(5).tickSize(0).tickPadding(10);
-    const yAxis = d3.axisLeft(y).tickSize(0).tickPadding(10);
-
-    svg.selectAll("line.vertical-grid")
-      .data(x.ticks(5))
-      .enter()
-      .append("line")
-      .attr("x1", d => x(d))
-      .attr("y1", 0)
-      .attr("x2", d => x(d))
-      .attr("y2", height)
-      .style("stroke", GRID_COLOR)
-      .style("stroke-width", 0.5)
-      .style("stroke-dasharray", "3 3");
-
-    svg.selectAll(".bar")
-      .data(keys)
-      .enter().append("rect")
-      .attr("y", d => y(d))
-      .attr("height", y.bandwidth())
-      .attr("x", 0)
-      .attr("width", d => x(userRecord[d]))
-      .attr('fill', BAR_COLOR)
-      .attr('rx', 4);
-
-    svg.append("g")
-      .attr("class", "y axis")
-      .call(yAxis)
-      .selectAll('path')
-      .style('stroke-width', '1px')
-      .style('stroke', AXIS_COLOR);
-
-    svg.selectAll(".y.axis .tick text")
-      .style("font-family", "sans-serif")
-      .style("font-size", "11px")
-      .style("font-weight", "bold")
-      .style('fill', TEXT_COLOR)
-      .text(d => d.toUpperCase());
-
-    svg.append("g")
-      .attr("transform", "translate(0," + height + ")")
-      .call(xAxis)
-      .selectAll("text")
-      .style("display", "none");
-
-    svg.selectAll(".x.axis path")
-      .style("stroke", AXIS_COLOR)
-      .style("stroke-width", "1px");
-
-    svg.selectAll(".x.axis .tick line")
-      .style("stroke", AXIS_COLOR);
-
-    svg.selectAll(".label")
-      .data(keys)
-      .enter().append("text")
-      .attr("x", d => x(userRecord[d]) + 5)
-      .attr("y", d => y(d) + y.bandwidth() / 2)
-      .attr("dy", ".35em")
-      .style("font-family", "sans-serif")
-      .style("font-size", "11px")
-      .style("font-weight", "bold")
-      .style('fill', TEXT_COLOR)
-      .text(d => userRecord[d]);
-
-    return () => {
-      d3.select(currentChartRef).selectAll("*").remove();
-    };
-  }, [userRecord]);
-
-  function getPercentage(record) {
-    const wins = record[1] + record[2] + record[3];
-    const total = wins + record['x'];
-    const percentage = total > 0 ? ((wins / total) * 100).toFixed(1) : '0.0';
-    return `Stats: ${wins}/${total} (${percentage}%)`;
+  function getStats(record) {
+    const wins = (record[1] || 0) + (record[2] || 0) + (record[3] || 0) + (record[4] || 0) + (record[5] || 0);
+    const total = wins + (record['x'] || 0);
+    const pct = total > 0 ? ((wins / total) * 100).toFixed(1) : '0.0';
+    return { wins, total, pct };
   }
+
+  function getDailyPercentages(scores) {
+    if (!scores) return null;
+    const total = KEYS.reduce((sum, k) => sum + (scores[k] || 0), 0);
+    if (total === 0) return null;
+    const pcts = {};
+    KEYS.forEach(k => {
+      pcts[k] = Math.round(((scores[k] || 0) / total) * 100);
+    });
+    return pcts;
+  }
+
+  const stats = getStats(userRecord);
+  const dailyPcts = getDailyPercentages(dailyScores);
+  const dailyTotal = dailyScores ? KEYS.reduce((sum, k) => sum + (dailyScores[k] || 0), 0) : 0;
 
   return (
     <div className={styles.blurBackground} onClick={showScoreboard}>
       <div className={styles.container} onClick={(e) => e.stopPropagation()}>
-        <button className={styles.closeButton} aria-label="close scores" onClick={showScoreboard}>X</button>
-        <h3 className={styles.title}>Your Scores</h3>
-        <div id="scores" ref={chartRef}></div>
-        <p className={styles.stats}>{getPercentage(userRecord)}</p>
+        <button className={styles.closeButton} aria-label="close scores" onClick={showScoreboard}>&times;</button>
+
+        <div className={styles.tabs}>
+          <button
+            className={`${styles.tab} ${activeTab === 'you' ? styles.tabActive : ''}`}
+            onClick={() => setActiveTab('you')}
+          >
+            Your Scores
+          </button>
+          <button
+            className={`${styles.tab} ${activeTab === 'daily' ? styles.tabActive : ''}`}
+            onClick={() => setActiveTab('daily')}
+          >
+            Today
+          </button>
+        </div>
+
+        {activeTab === 'you' && (
+          <>
+            <BarChart data={userRecord} isPercentage={false} />
+            <p className={styles.stats}>{stats.wins}/{stats.total} wins ({stats.pct}%)</p>
+          </>
+        )}
+
+        {activeTab === 'daily' && (
+          <>
+            {loading && <p className={styles.stats}>Loading...</p>}
+            {!loading && dailyPcts && (
+              <>
+                <BarChart data={dailyPcts} isPercentage={true} />
+                <p className={styles.stats}>{dailyTotal} players today</p>
+              </>
+            )}
+            {!loading && !dailyPcts && (
+              <p className={styles.stats}>No scores yet today</p>
+            )}
+          </>
+        )}
       </div>
     </div>
-  )
+  );
 }
 
-export default Graph
+export default Graph;

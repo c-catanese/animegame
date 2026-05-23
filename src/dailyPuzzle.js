@@ -50,7 +50,9 @@ export function getTodayUTC() {
 
 /**
  * Returns the daily puzzle: { name, videoUrl, gameNumber }
- * Deterministic — same catalog + same day = same result for all users.
+ *
+ * Shuffles the entire catalog deterministically. Day N picks entry N
+ * from the shuffled order — no repeats until the full catalog is exhausted.
  */
 export function getDailyPuzzle(catalog) {
   if (!catalog || catalog.length === 0) return null;
@@ -58,17 +60,24 @@ export function getDailyPuzzle(catalog) {
   const dayNumber = getDayNumber();
   const gameNumber = dayNumber + GAME_NUMBER_OFFSET;
 
-  // Create a seeded shuffle of the entire catalog
+  // Shuffle the entire catalog with a fixed seed — same order for all users
   const rng = mulberry32(SEED_SALT);
   const shuffled = seededShuffle(catalog.length, rng);
 
-  // Pick today's entry by cycling through the shuffled order
   const catalogIndex = shuffled[dayNumber % catalog.length];
   const entry = catalog[catalogIndex];
 
+  // If the entry has multiple video URLs (merged seasons), pick one deterministically
+  let videoUrl = entry.videoUrl;
+  if (entry.videoUrls && entry.videoUrls.length > 1) {
+    const videoRng = mulberry32(SEED_SALT + dayNumber);
+    const videoIndex = Math.floor(videoRng() * entry.videoUrls.length);
+    videoUrl = entry.videoUrls[videoIndex];
+  }
+
   return {
     name: entry.name,
-    videoUrl: entry.videoUrl,
+    videoUrl,
     gameNumber,
   };
 }

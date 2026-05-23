@@ -41,6 +41,7 @@ function extractFirstOP(anime) {
             name: anime.name.toLowerCase(),
             englishName: englishName ? englishName.toLowerCase() : null,
             videoUrl: video.link,
+            year: anime.year || null,
           };
         }
       }
