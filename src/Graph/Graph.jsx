@@ -113,7 +113,7 @@ function Graph({ userRecord, showScoreboard }) {
             {!loading && dailyPcts && (
               <>
                 <BarChart data={dailyPcts} isPercentage={true} />
-                <p className={styles.stats}>{dailyTotal} players today</p>
+                <p className={styles.stats}>Today's results</p>
               </>
             )}
             {!loading && !dailyPcts && (
