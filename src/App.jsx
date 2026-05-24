@@ -316,7 +316,7 @@ function App() {
         <div className="game-wrapper">
     <div className="app">
       {!isReady && <LoadingScreen />}
-      {isReady && (
+      <div className={`game-content ${isReady ? 'game-content-visible' : ''}`}>
         <>
           <header className="header">
             <h1>Weeble #{gameNumber}</h1>
@@ -409,7 +409,7 @@ function App() {
           </div>
           <VideoComponent ref={playerRef} answerVideo={answerVideo} height="0px" width="0px" controls={false} />
         </>
-      )}
+      </div>
     </div>
         </div>
         <div className="ad-slot ad-slot-left">Ad</div>
