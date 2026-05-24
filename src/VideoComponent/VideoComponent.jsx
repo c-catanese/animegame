@@ -11,6 +11,7 @@ const VideoComponent = forwardRef(({ answerVideo, height, width, controls }, ref
         autoPlay={false}
         loop
         preload="auto"
+        playsInline
         controls={controls}
         width={width}
         height={height}
